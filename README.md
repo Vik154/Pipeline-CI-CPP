@@ -79,4 +79,4 @@ _Запустить_
 
 </details>
 
-<img align="center" width="880" height="450" src="print_screen/Hello.png" alt="Пример работы данного кода"/>
+<img align="center" width="800" height="420" src="print_screen/Hello2.png" alt="Пример работы данного кода"/>
