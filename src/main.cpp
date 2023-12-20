@@ -22,7 +22,7 @@ int main() {
 	font.print("Hello");
 	font.clear();
 	cout << "\n";
-	font.print("Pentagon");
+	font.print("World");
 
 	cout << "Building from CMake.\n";
 	return 0;
