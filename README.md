@@ -8,8 +8,12 @@ sudo mkdir new_folder && cd new_folder/
 ~~~
 
 _Склонировать репозиторий_
-~~~sh
+~~~bash
 sudo git clone https://github.com/Vik154/Pipeline-CI-CPP.git
 ~~~
 
+_Перейти в репозиторий, создать папку "build" и перейти в неё_
+~~~bash
+cd Pipeline-CI-CPP/ && sudo mkdir build && cd build/
+~~~
 
