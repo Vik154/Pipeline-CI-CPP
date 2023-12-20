@@ -5,7 +5,8 @@
 
 ### Сборка и запуск из под Linux (Ubuntu 22.04.3 LTS)
 
-<details>
+<details> <summary><b><i>🤯 Пример на WSL 2 + Ubuntu</i></b></summary>
+  
 _Создать новую папку, чтобы снести потом_
 ~~~bash
 sudo mkdir new_folder && cd new_folder/
