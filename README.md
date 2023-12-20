@@ -34,7 +34,7 @@ _Запустить_
 ./myproject
 ~~~
 </details>
-<hr />
+
 <details> <summary><b><i>🤯 Описание шагов с использованием PowerShell 7 и Windows 11</i></b></summary>
 
 </details>
