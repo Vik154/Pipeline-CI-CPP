@@ -42,6 +42,11 @@ _Создать новую папку и перейти в неё_
 mkdir test && cd test/
 ~~~
 
+_Склонировать репозиторий_
+~~~shell
+git clone https://github.com/Vik154/Pipeline-CI-CPP.git
+~~~
+
 </details>
 
 
