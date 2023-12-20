@@ -43,24 +43,24 @@ mkdir test && cd test/
 ~~~
 
 _Склонировать репозиторий_
-~~~shell
+~~~console
 git clone https://github.com/Vik154/Pipeline-CI-CPP.git
 ~~~
 
 _Перейти в репозиторий, создать папку "build" и перейти в неё_
-~~~shell
+~~~console
 cd Pipeline-CI-CPP/ && mkdir build && cd build/
 ~~~
 
 _Внутри папки "build" сконфигурировать файлы с помощью CMake_
-~~~cmd
+~~~console
 cmake ..
 ~~~
 
 _Всё также внутри папки "build" собрать проект_
 _Флаг --config указывает версию сборки_
-~~~PowerShell
- cmake --build . --config Release
+~~~console
+cmake --build . --config Release
 ~~~
 
 _Перйти в папку Release_
