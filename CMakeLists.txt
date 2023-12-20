@@ -12,12 +12,3 @@ set(SOURCE_FILES
 
 # Добавляем исполняемый файл с именем myproject
 add_executable(myproject ${SOURCE_FILES})
-
-# Можно и так (Тогда имя исполняемого файла будет == TestProject)
-# add_executable(${PROJECT_NAME} src/main.cpp)
-
-# Указываем, какую версию компилятора использовать
-# target_compile_features(myproject PRIVATE cxx_std_11)
-
-# Устанавливаем дополнительные настройки компиляции
-# target_compile_options(myproject PRIVATE -Wall)
