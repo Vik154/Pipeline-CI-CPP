@@ -15,27 +15,11 @@ RUN apt-get update && \
 
 # Удаление папки "build" если вдруг собирал cmake под windows
 # создание папки "build", конфигурирование симэйком, потом сборка
-# запуск исполняемого файл -- myproject
 RUN rm -Rf build && \
     mkdir build && \
     cd build && \
     cmake .. && \
     cmake --build .
 
+# запуск исполняемого файл -- myproject при создании контейнеров
 CMD cd build/ && ./myproject
-
-# Скопируем приложение со сборочного контейнера в рабочую директорию
-#COPY --from=myproj /usr/src/myproj/build/myproject .
-
-# Установим точку входа
-#ENTRYPOINT ["./myproject"]
-
-
-# RUN cd build && ./myproject
-
-# CMD [ "cd build && ./myproject" ]
-# CMD [ "./myproject" ]
-# ENTRYPOINT [ "./myproject" ]  
-
-#CMD [ "ls -la" ]
-# CMD [ "bash" ]
