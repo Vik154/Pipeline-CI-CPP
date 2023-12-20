@@ -16,8 +16,8 @@ int main() {
 	std::this_thread::sleep_for(200ms);
 	th->join();
 }
-    ascii::Ascii font = ascii::Ascii();
 
+    ascii::Ascii font = ascii::Ascii();
 	font.print("Hello");
 	font.clear();
 	cout << "\n";
