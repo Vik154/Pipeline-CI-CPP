@@ -17,3 +17,7 @@ _Перейти в репозиторий, создать папку "build" и 
 cd Pipeline-CI-CPP/ && sudo mkdir build && cd build/
 ~~~
 
+_Внутри папки "build" сконфигурировать файлы с помощью CMake_
+~~~bash
+sudo cmake ..
+~~~
