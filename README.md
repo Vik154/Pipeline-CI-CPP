@@ -75,6 +75,8 @@ _Запустить_
 
 </details>
 
+<details> <summary><b><i>🤯 Описание шагов с использованием WSL 2 и Ubuntu 22.04.3 LTS</i></b></summary>
+
+</details>
 
 <img align="center" width="880" height="450" src="print_screen/Hello.png" alt="Пример работы данного кода"/>
-
