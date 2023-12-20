@@ -58,8 +58,19 @@ cmake ..
 ~~~
 
 _Всё также внутри папки "build" собрать проект_
-~~~bash
+_Флаг --config указывает версию сборки_
+~~~PowerShell
  cmake --build . --config Release
+~~~
+
+_Перйти в папку Release_
+~~~console
+cd Release/
+~~~
+
+_Запустить_
+~~~console
+.\myproject.exe
 ~~~
 
 </details>
