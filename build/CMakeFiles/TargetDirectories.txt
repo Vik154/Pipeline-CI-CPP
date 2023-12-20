@@ -1,3 +1,0 @@
-C:/Users/user/Desktop/test_cpp/Pipeline-CI-CPP/build/CMakeFiles/TestProject.dir
-C:/Users/user/Desktop/test_cpp/Pipeline-CI-CPP/build/CMakeFiles/ALL_BUILD.dir
-C:/Users/user/Desktop/test_cpp/Pipeline-CI-CPP/build/CMakeFiles/ZERO_CHECK.dir

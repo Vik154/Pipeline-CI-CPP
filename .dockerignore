@@ -1,0 +1,15 @@
+.git
+.gitignore
+.env
+.vscode
+
+Dockerfile*
+docker-compose*
+.dockerignore
+
+*/bin
+*/obj
+*/build
+
+README.md
+docs
