@@ -47,6 +47,11 @@ _Склонировать репозиторий_
 git clone https://github.com/Vik154/Pipeline-CI-CPP.git
 ~~~
 
+_Перейти в репозиторий, создать папку "build" и перейти в неё_
+~~~shell
+cd Pipeline-CI-CPP/ && mkdir build && cd build/
+~~~
+
 </details>
 
 
