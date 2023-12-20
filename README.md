@@ -3,8 +3,9 @@
 <img align="center" width="880" height="450" src="print_screen/Hello.png" alt="Пример работы данного кода"/>
 
 
-### Сборка из под Linux (Ubuntu 22.04.3 LTS)
+### Сборка и запуск из под Linux (Ubuntu 22.04.3 LTS)
 
+<details>
 _Создать новую папку, чтобы снести потом_
 ~~~bash
 sudo mkdir new_folder && cd new_folder/
@@ -34,3 +35,4 @@ _Запустить_
 ~~~bash
 ./myproject
 ~~~
+</details>
