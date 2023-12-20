@@ -1,6 +1,6 @@
 ## Пример простого развертывания приложения на C++
 
-<img align="center" width="480" height="405" src="print_screen/Hello.png" alt="Пример работы данного кода"/>
+<img align="center" width="880" height="450" src="print_screen/Hello.png" alt="Пример работы данного кода"/>
 
 
 ### Сборка из под Linux (Ubuntu 22.04.3 LTS)
