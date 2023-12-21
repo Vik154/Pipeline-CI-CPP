@@ -1,0 +1,15 @@
+image: ubuntu:latest
+
+stages:
+    - build
+    - run
+
+build_on_linux:
+    stage: build
+    script:
+        - mkdir build && cd build/
+        - cmake ..
+        - cmake --build .
+        - ./myproject
+        - echo ${pwd}
+
