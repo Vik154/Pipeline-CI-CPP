@@ -3,29 +3,27 @@ image: gcc
 stages:
     - build
 
-build:linux:
-    stage: build
-    tags:
-      - linux
-    
-    before_script:
-    - apt update && apt -y install cmake
+#build:linux:
+#    stage: build
+#    tags:
+#      - linux
+#    
+#    before_script:
+#    - apt update && apt -y install cmake
+#
+#    script:
+#        - mkdir build && cd build/
+#        - cmake ..
+#        - cmake --build .
+#        - ./myproject
+#        - echo ${pwd}
 
-    script:
-        - mkdir build && cd build/
-        - cmake ..
-        - cmake --build .
-        - ./myproject
-        - echo ${pwd}
-
-build:windows:
-  stage: build
+build docker image:
+  image: docker:stable
+  stage: build docker image
   tags:
-    - windows
+    - docker
   script:
-    - cd build
-    - '"C:\Program Files\CMake\bin\cmake.exe" -G "Visual Studio 15 2017 Win64" -DBUILD_LIBTIFF=ON ..'
-    - '"C:\Program Files\CMake\bin\cmake.exe" ..'
-    - '"C:\Program Files\CMake\bin\cmake.exe" --build . --config Release --target ALL_BUILD'
-    - cd Release
-    - ./myproject
+    - docker build . --file Dockerfile --tag hello_cmake
+    - docker run --name my_container hello_cmake   
+
