@@ -4,8 +4,12 @@ stages:
     - build
     - run
 
-build_on_linux:
+build:linux:
     stage: build
+    
+    before_script:
+    - apt update && apt -y install cmake
+
     script:
         - mkdir build && cd build/
         - cmake ..
