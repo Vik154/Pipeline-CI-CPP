@@ -2,10 +2,11 @@ image: gcc
 
 stages:
     - build
-    - run
 
 build:linux:
     stage: build
+    tags:
+      - linux
     
     before_script:
     - apt update && apt -y install cmake
@@ -17,3 +18,14 @@ build:linux:
         - ./myproject
         - echo ${pwd}
 
+build:windows:
+  stage: build
+  tags:
+    - windows
+  script:
+    - cd build
+    - '"C:\Program Files\CMake\bin\cmake.exe" -G "Visual Studio 15 2017 Win64" -DBUILD_LIBTIFF=ON ..'
+    - '"C:\Program Files\CMake\bin\cmake.exe" ..'
+    - '"C:\Program Files\CMake\bin\cmake.exe" --build . --config Release --target ALL_BUILD'
+    - cd Release
+    - ./myproject
