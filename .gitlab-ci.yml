@@ -20,7 +20,7 @@ stages:
 
 build docker image:
   image: docker:stable
-  stage: build docker image
+  stage: build
   tags:
     - docker
   script:
