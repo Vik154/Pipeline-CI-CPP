@@ -13,6 +13,6 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag my_container
+      run: docker build . --file Dockerfile --tag hello_cmake
     - name: Docker run
       run: docker run --name my_container hello_cmake 
