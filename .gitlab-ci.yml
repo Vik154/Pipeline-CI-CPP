@@ -3,27 +3,17 @@ image: gcc
 stages:
     - build
 
-#build:linux:
-#    stage: build
-#    tags:
-#      - linux
-#    
-#    before_script:
-#    - apt update && apt -y install cmake
-#
-#    script:
-#        - mkdir build && cd build/
-#        - cmake ..
-#        - cmake --build .
-#        - ./myproject
-#        - echo ${pwd}
+build:linux:
+    stage: build
+    tags:
+      - linux
+    
+    before_script:
+    - apt update && apt -y install cmake
 
-build docker image:
-  image: docker:stable
-  stage: build
-  tags:
-    - docker
-  script:
-    - docker build . --file Dockerfile --tag hello_cmake
-    - docker run --name my_container hello_cmake   
-
+    script:
+        - mkdir build && cd build/
+        - cmake ..
+        - cmake --build .
+        - ./myproject
+        - echo ${pwd}
