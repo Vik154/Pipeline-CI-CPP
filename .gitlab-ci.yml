@@ -1,19 +1,31 @@
-image: gcc
+# Развертывание в докере (без раннеров инструментами GitLab)
+default:
+  image: docker:latest
+  services:
+    - docker:dind
+  before_script:
+    - docker info
 
 stages:
-    - build
+  - "docker in docker"
+  - "linux ci"
 
-build:linux:
-    stage: build
-    tags:
-      - linux
-    
-    before_script:
+# Сборка с предустановленным докером
+build_docker:
+  stage: "docker in docker"
+  script:
+    - docker build . --file Dockerfile --tag hello_cmake
+    - docker run --rm --name my_container hello_cmake
+
+# Сборка в линуксе
+build_linux:
+  image: gcc
+  stage: "linux ci"
+  before_script:
     - apt update && apt -y install cmake
-
-    script:
-        - mkdir build && cd build/
-        - cmake ..
-        - cmake --build .
-        - ./myproject
-        - echo ${pwd}
+  script:
+    - mkdir build && cd build/
+    - cmake ..
+    - cmake --build .
+    - ./myproject
+    - echo ${pwd}
