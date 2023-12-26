@@ -1,23 +1,20 @@
-# Развертывание в докере (без раннеров инструментами GitLab)
-default:
-  image: docker:latest
-  services:
-    - docker:dind
-  before_script:
-    - docker info
-
+# Стадии конвейера
 stages:
   - "docker in docker"
   - "linux ci"
+  - "windows ci"
 
-# Сборка с предустановленным докером
+# Сборка докером
 build_docker:
+  image: docker:latest
+  services:
+    - docker:dind
   stage: "docker in docker"
   script:
     - docker build . --file Dockerfile --tag hello_cmake
     - docker run --rm --name my_container hello_cmake
 
-# Сборка в линуксе
+# Сборка cmake в линуксе
 build_linux:
   image: gcc
   stage: "linux ci"
@@ -29,3 +26,16 @@ build_linux:
     - cmake --build .
     - ./myproject
     - echo ${pwd}
+
+# Сборка cmake в Windows
+build_windows:
+  stage: "windows ci"
+  tags:
+    - shared-windows 
+    - windows
+    - windows-1809
+  script:
+    - cmake -B $CI_PROJECT_PATH/build -DCMAKE_BUILD_TYPE=Release
+    - cmake --build $CI_PROJECT_PATH/build --config Release
+    - cd $CI_PROJECT_PATH/build/Release
+    - ./myproject
